@@ -5,11 +5,23 @@ export const Pages: CollectionConfig = {
   access: {
     read: () => true,
   },
+  admin: {
+    defaultColumns: ['title', 'slug', '_status', 'updatedAt'],
+  },
   fields: [
     {
       name: 'title',
       type: 'text',
       required: true,
+    },
+    {
+      name: 'slug',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'content',
+      type: 'richText',
     },
   ],
 }
