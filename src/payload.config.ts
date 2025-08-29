@@ -1,6 +1,6 @@
 // storage-adapter-import-placeholder
 import { postgresAdapter } from '@payloadcms/db-postgres'
-// import { payloadCloudPlugin } from '@payloadcms/payload-cloud'
+import { nestedDocsPlugin } from '@payloadcms/plugin-nested-docs'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import path from 'path'
 import { buildConfig } from 'payload'
@@ -39,7 +39,10 @@ export default buildConfig({
   },
   sharp,
   plugins: [
-    // payloadCloudPlugin(),
-    // storage-adapter-placeholder
+    nestedDocsPlugin({
+      collections: ['pages'],
+      generateLabel: (_, doc) => doc.title,
+      generateURL: (docs) => docs.reduce((url, doc) => `${url}/${doc.slug}`, ''),
+    }),
   ],
 })

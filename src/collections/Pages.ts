@@ -2,6 +2,7 @@ import type { CollectionConfig } from 'payload'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
+  trash: true,
   access: {
     read: () => true,
   },
@@ -24,4 +25,11 @@ export const Pages: CollectionConfig = {
       type: 'richText',
     },
   ],
+  versions: {
+    drafts: {
+      autosave: {
+        interval: 100,
+      },
+    },
+  },
 }
