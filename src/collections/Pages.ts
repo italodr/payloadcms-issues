@@ -1,4 +1,5 @@
-import type { CollectionConfig } from 'payload'
+import type { Block, CollectionConfig } from 'payload'
+import { slugField } from '../fields/slug'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -14,14 +15,12 @@ export const Pages: CollectionConfig = {
       type: 'text',
       required: true,
     },
-    {
-      name: 'slug',
-      type: 'text',
-      required: true,
-    },
-    {
-      name: 'content',
-      type: 'richText',
-    },
+    ...slugField('title'),
   ],
+  versions: {
+    drafts: {
+      autosave: true,
+    },
+    maxPerDoc: 50,
+  },
 }
