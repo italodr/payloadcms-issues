@@ -10,6 +10,7 @@ import sharp from 'sharp'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Pages } from './collections/Pages'
+import { Header } from './globals/header'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -37,6 +38,7 @@ export default buildConfig({
     fallback: false,
     locales: ['en', 'es'],
   },
+  globals: [Header],
   sharp,
   plugins: [
     // payloadCloudPlugin(),
