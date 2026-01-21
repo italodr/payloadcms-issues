@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-DB_CONTAINER_NAME="postgres-db"
+DB_CONTAINER_NAME="payloadcms-issues-db"
 DB_PASSWORD="password123"
-POSTGRES_DB="postgres_db"
+POSTGRES_DB="payloadcms_issue_db"
 POSTGRES_PORT=5432
 
 if ! [ -x "$(command -v docker)" ]; then

@@ -15,26 +15,26 @@
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
   },
   "dependencies": {
-    "@payloadcms/next": "3.68.2",
-    "@payloadcms/payload-cloud": "3.68.2",
-    "@payloadcms/richtext-lexical": "3.68.2",
+    "@payloadcms/next": "3.72.0",
+    "@payloadcms/payload-cloud": "3.72.0",
+    "@payloadcms/richtext-lexical": "3.72.0",
     "cross-env": "^10.1.0",
     "graphql": "^16.12.0",
-    "next": "15.5.7",
-    "payload": "3.68.2",
-    "react": "19.2.1",
-    "react-dom": "19.2.1",
+    "next": "15.5.9",
+    "payload": "3.72.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
     "sharp": "0.34.5",
-    "@payloadcms/db-postgres": "3.68.2"
+    "@payloadcms/db-postgres": "3.72.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.3",
-    "@types/node": "^24.10.3",
-    "@types/react": "19.2.7",
+    "@types/node": "^24.10.9",
+    "@types/react": "19.2.9",
     "@types/react-dom": "19.2.3",
-    "eslint": "^9.39.1",
-    "eslint-config-next": "16.0.8",
-    "prettier": "^3.7.4",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "16.1.4",
+    "prettier": "^3.8.0",
     "typescript": "5.9.3"
   },
   "engines": {
